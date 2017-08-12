@@ -1,11 +1,11 @@
 body {
-  font-family: cursive;
+  font-family: arial;
   background-color: aqua;
 }
 
 #calculator {
-  height: 400px;
-  width: 300px;
+  height: 365px;
+  width: 425px;
   margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
@@ -31,10 +31,71 @@ body {
 }
 
 #history {
-  /*transform: translate(-13px, -17px);*/
   position: relative;
   height: 10px;
   bottom: 17px;
   margin-right: 14px;
   font-size: 12px;
+}
+
+#buttons {
+  font-size: 16px;
+  position: absolute;
+  display: inline-block;
+  width: 280px;
+  height: auto;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  background-color: white;
+  margin: 0 4px 10px 8px;
+  height: 40px;
+  width: 50px;
+}
+
+#saved {
+  position: absolute;
+  font-size: 20px;
+  text-align: center;
+  height: 250px;
+  width: 140px;
+  margin-top: -18%;
+  margin-left: 95%;
+  margin-right: auto;
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: green;
+}
+
+#save-button {
+  position: absolute;
+  font-size: 12px;
+  text-align: center;
+  height: 90px;
+  margin-top: auto;
+  margin-left: 2%;
+  margin-right: auto;
+}
+
+#cancel-button {
+  position: absolute;
+  font-size: 12px;
+  text-align: center;
+  height: 90px;
+  margin-top: auto;
+  margin-left: 27%;
+  margin-right: auto;
+}
+
+#equal-button {
+  margin-left: 140px;
+}
+
+#divide-button {
+  margin-left: 140px;
 }
