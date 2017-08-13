@@ -12,5 +12,4 @@ describe('Calculator', function() {
   it('starts with an empty array for history', function() {
     expect(calculator.history).toEqual([]);
   })
-  
 })
