@@ -11,4 +11,5 @@ $(document).ready(function() {
     calculator.history.push(buttonPress);
     seeHistory();
   })
+  
 })
