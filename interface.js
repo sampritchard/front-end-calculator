@@ -5,8 +5,10 @@ $(document).ready(function() {
   function seeHistory() {
     $('#history').text(calculator.history);
   }
-  $('#1').click(function() {
-    calculator.history.push(1);
+
+  $('.button').click(function() {
+    var buttonPress = $(this).html();
+    calculator.history.push(buttonPress);
     seeHistory();
   })
 })
