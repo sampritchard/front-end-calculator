@@ -11,7 +11,7 @@ $(document).ready(function() {
   }
 
   function savedMaths() {
-    $('#saved').text(calculator.saved);
+  $('#saved').text(calculator.saved);
   }
 
   $('.button').click(function() {

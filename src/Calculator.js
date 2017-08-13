@@ -12,4 +12,6 @@ Calculator.prototype.sum = function () {
 
 Calculator.prototype.saveMaths = function () {
   calculator.saved.push(calculator.history.join(""));
+  calculator.saved.push(prompt("What is the name of this math?"))
+  calculator.saved.push(new Date().toDateString());
 };
