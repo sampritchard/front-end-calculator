@@ -10,6 +10,10 @@ $(document).ready(function() {
     $('#answer').text(calculator.result);
   }
 
+  function savedMaths() {
+    $('#saved').text(calculator.saved);
+  }
+
   $('.button').click(function() {
     var buttonPress = $(this).html();
     calculator.history.push(buttonPress);
@@ -18,12 +22,18 @@ $(document).ready(function() {
 
   $('#cancel-button').click(function() {
     calculator.history = [];
+    calculator.result = 0;
     seeHistory();
+    seeResult();
   });
 
   $('#equal-button').click(function() {
     calculator.sum();
     seeResult();
-    calculator.history = [];
+  })
+
+  $('#save-button').click(function() {
+    calculator.saved.push(calculator.history.join(""));
+    savedMaths();
   })
 })
