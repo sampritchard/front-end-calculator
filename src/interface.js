@@ -33,7 +33,7 @@ $(document).ready(function() {
   })
 
   $('#save-button').click(function() {
-    calculator.saved.push(calculator.history.join(""));
+    calculator.saveMaths();
     savedMaths();
   })
 })

@@ -57,7 +57,7 @@ button {
   width: 50px;
 }
 
-#saved {
+#saved-title {
   position: absolute;
   font-size: 20px;
   text-align: center;
@@ -98,4 +98,8 @@ button {
 
 #divide-button {
   margin-left: 140px;
+}
+
+#saved {
+  font-size: 13px;
 }
