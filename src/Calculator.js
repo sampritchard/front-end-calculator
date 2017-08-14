@@ -11,7 +11,7 @@ function Calculator() {
   };
 
   Calculator.prototype.saveMaths = function () {
-    var name = prompt("Name?");
+    var name = prompt("What would you like to call this function?");
     this.history.push(name);
     this.history.push(new Date())
     var ul = document.getElementById("list-saved-maths");
@@ -44,11 +44,11 @@ function Calculator() {
       for (var i = 0; i < list.length; i++) {
         var span = document.createElement("SPAN");
         var txt = document.createTextNode("Select");
-        span.className = "select";
+        span.className = "close";
         span.appendChild(txt);
         list[i].appendChild(span);
 
-      var select = document.getElementsByClassName("select");
+      var select = document.getElementsByClassName("close");
       for (var i = 0; i < select.length; i++) {
         select[i].onclick = function() {
           alert("Error! Needs Debugging")
