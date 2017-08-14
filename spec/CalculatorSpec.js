@@ -42,8 +42,4 @@ describe('Calculator', function() {
     calculator.sum();
     expect(calculator.result).toEqual(7);
   })
-
-  it('has no saved maths at the start', function() {
-    expect(calculator.saved).toEqual([]);
-  })
 })
