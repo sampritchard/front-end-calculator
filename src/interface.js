@@ -10,10 +10,6 @@ $(document).ready(function() {
     $('#answer').text(calculator.result);
   }
 
-  function savedMaths() {
-  $('#saved').text(calculator.saved.reverse());
-  }
-
   $('.button').click(function() {
     var buttonPress = $(this).html();
     calculator.history.push(buttonPress);
@@ -34,6 +30,5 @@ $(document).ready(function() {
 
   $('#save-button').click(function() {
     calculator.saveMaths();
-    savedMaths();
   })
 })

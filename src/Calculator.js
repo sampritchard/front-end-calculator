@@ -1,7 +1,6 @@
 function Calculator() {
   this.result = 0;
   this.history = [];
-  this.saved = [];
 }
 
 Calculator.prototype.sum = function () {
@@ -11,7 +10,10 @@ Calculator.prototype.sum = function () {
 };
 
 Calculator.prototype.saveMaths = function () {
-  calculator.saved.push(calculator.history.join(""));
-  calculator.saved.push(prompt("What is the name of this math?"))
-  calculator.saved.push(new Date().toDateString());
+  var name = prompt("Name?");
+  this.history.push( name);
+  var ul = document.getElementById("list-saved-maths");
+  var li = document.createElement("li");
+  li.appendChild(document.createTextNode(this.history.join("")));
+  ul.appendChild(li);
 };
