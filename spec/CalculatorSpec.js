@@ -42,4 +42,5 @@ describe('Calculator', function() {
     calculator.sum();
     expect(calculator.result).toEqual(7);
   })
+
 })
