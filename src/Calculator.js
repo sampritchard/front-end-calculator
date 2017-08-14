@@ -1,6 +1,7 @@
 function Calculator() {
   this.result = 0;
   this.history = [];
+  this.selectedItem = [];
 }
 
   Calculator.prototype.sum = function () {
@@ -15,7 +16,7 @@ function Calculator() {
     this.history.push(new Date())
     var ul = document.getElementById("list-saved-maths");
     var li = document.createElement("li");
-    li.appendChild(document.createTextNode(this.history.join("")));
+    li.appendChild(document.createTextNode(this.history.join(" ")));
     ul.appendChild(li);
   };
 
@@ -23,7 +24,7 @@ function Calculator() {
     var list = document.getElementsByTagName("li");
     for (var i = 0; i < list.length; i++) {
       var span = document.createElement("SPAN");
-      var txt = document.createTextNode("\u00D7");
+      var txt = document.createTextNode("Delete");
       span.className = "close";
       span.appendChild(txt);
       list[i].appendChild(span);
@@ -35,8 +36,26 @@ function Calculator() {
           div.style.display = "none";
           }
         }
+      }
     };
-  };
+
+    Calculator.prototype.selectButton = function () {
+      var list = document.getElementsByTagName("li");
+      for (var i = 0; i < list.length; i++) {
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("Select");
+        span.className = "select";
+        span.appendChild(txt);
+        list[i].appendChild(span);
+
+      var select = document.getElementsByClassName("select");
+      for (var i = 0; i < select.length; i++) {
+        select[i].onclick = function() {
+          alert("Error! Needs Debugging")
+          }
+        }
+      }
+    };
 
   Calculator.prototype.reverseList = function () {
     var li = document.getElementsByTagName('li');
