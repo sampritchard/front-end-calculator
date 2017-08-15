@@ -30,16 +30,17 @@ $(document).ready(function() {
 
   $('#save-button').click(function() {
     if (calculator.history.length > 0) {
-    calculator.saveMaths();
-    calculator.reverseList();
-    calculator.deleteButton();
-    calculator.selectButton();
-  } else {
-    alert("Please enter something!!")
-  }
-  })
+      calculator.saveMaths();
+      calculator.reverseList();
+      calculator.deleteButton();
+      calculator.selectButton();
+    } else {
+      alert("Please enter something!!")
+    }
+  });
 
   $('#saved-math').click(function() {
     calculator.showMaths();
   })
+  
 })

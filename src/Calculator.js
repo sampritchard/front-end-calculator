@@ -1,13 +1,11 @@
 function Calculator() {
   this.result = 0;
   this.history = [];
-  this.selectedItem = [];
 }
 
   Calculator.prototype.sum = function () {
-    var sum = this.history.join("");
-    var sumString = sum.toString();
-    this.result = eval(sumString);
+    var sum = this.history.join("").toString();
+    this.result = eval(sum);
   };
 
   Calculator.prototype.saveMaths = function () {
@@ -28,10 +26,9 @@ function Calculator() {
       span.className = "close";
       span.appendChild(txt);
       list[i].appendChild(span);
-
       var close = document.getElementsByClassName("close");
-      for (var i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
+        for (var i = 0; i < close.length; i++) {
+          close[i].onclick = function() {
           var div = this.parentElement;
           div.style.display = "none";
           }
@@ -44,31 +41,30 @@ function Calculator() {
       for (var i = 0; i < list.length; i++) {
         var span = document.createElement("SPAN");
         var txt = document.createTextNode("Select");
-        span.className = "close";
+        span.className = "select";
         span.appendChild(txt);
         list[i].appendChild(span);
-
-      var select = document.getElementsByClassName("close");
-      for (var i = 0; i < select.length; i++) {
-        select[i].onclick = function() {
-          alert("Error! Needs Debugging")
+        var select = document.getElementsByClassName("select");
+          for (var i = 0; i < select.length; i++) {
+            select[i].onclick = function() {
+            alert("Error! Needs Debugging")
+            }
           }
-        }
       }
     };
 
-  Calculator.prototype.reverseList = function () {
-    var li = document.getElementsByTagName('li');
-      for (var i = li.length; i-- ;) {
-      li[i].parentNode.appendChild(li[i]);
-      };
-  };
+    Calculator.prototype.reverseList = function () {
+      var li = document.getElementsByTagName('li');
+        for (var i = li.length; i-- ;) {
+        li[i].parentNode.appendChild(li[i]);
+        };
+    };
 
-  Calculator.prototype.showMaths = function () {
-    var x = document.getElementById("list-saved-maths");
-    if (x.style.display === 'none') {
-      x.style.display = 'block';
-    } else {
-      x.style.display = 'none';
-    }
-  };
+    Calculator.prototype.showMaths = function () {
+      var x = document.getElementById("list-saved-maths");
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+        } else {
+          x.style.display = 'none';
+        }
+    };

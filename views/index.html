@@ -1,68 +1,64 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <!-- HELP WITH MOBILE RESPONSIVENESS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
     integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" type ="text/css" href="styles/style.css"></style>
+    <link rel="stylesheet" type ="text/css" href="../styles/style.css"></style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Calculator in JavaScript</title>
 
   </head>
+
   <body>
     <div class='container'>
       <div id='calculator'>
 
-      <!-- RESULT BOX -->
-
-      <div id='resultbox' class='text-right'>
-        <div id='entry'>
-          <p id='answer'>0</p>
+        <div id='resultbox' class='text-right'>
+          <div id='entry'>
+            <p id='answer'>0</p>
+          </div>
+          <div id='history'>
+            <p></p>
+          </div>
         </div>
-        <div id='history'>
-          <p></p>
+
+        <div id='buttons'>
+          <button class='button'>7</button>
+          <button class='button'>8</button>
+          <button class='button'>9</button>
+          <button class='button'>+</button>
+          <button id="saved-math">Saved Maths (Toggle Show/Don't Show)</button>
+          <button class='button'>4</button>
+          <button class='button'>5</button>
+          <button class='button'>6</button>
+          <button class='button'>-</button>
+          <br>
+          <button class='button'>1</button>
+          <button class='button'>2</button>
+          <button class='button'>3</button>
+          <button class='button'>*</button>
+          <br>
+          <button class='button'>0</button>
+          <button id="save-button" value='Save'>Save</button>
+          <button id="cancel-button" value='Cancel'>Cancel</button>
+          <button class='button' id="divide-button" value='/'>/</button>
+          <br>
+          <button class='button'>.</button>
+          <button id="equal-button" value='='>=</button>
         </div>
       </div>
 
-      <!-- BUTONS -->
+        <ul id="list-saved-maths">
+        </ul>
 
-      <div id='buttons'>
-
-        <button class='button'>7</button>
-        <button class='button'>8</button>
-        <button class='button'>9</button>
-        <button class='button'>+</button>
-        <button id="saved-math">Saved Maths (Toggle Show/Don't Show)</button>
-        <button class='button'>4</button>
-        <button class='button'>5</button>
-        <button class='button'>6</button>
-        <button class='button'>-</button>
-        <br>
-        <button class='button'>1</button>
-        <button class='button'>2</button>
-        <button class='button'>3</button>
-        <button class='button'>*</button>
-        <br>
-        <button class='button'>0</button>
-        <button id="save-button" value='Save'>Save</button>
-        <button id="cancel-button" value='Cancel'>Cancel</button>
-        <button class='button' id="divide-button" value='/'>/</button>
-        <br>
-        <button class='button'>.</button>
-        <button id="equal-button" value='='>=</button>
-
-
-      </div>
     </div>
-    <ul id="list-saved-maths">
-    </ul>
 
-
-  </div>
-
-  <script src="src/jquery.js"></script>
-  <script src="src/interface.js"></script>
-  <script src="src/calculator.js"></script>
+  <script src="../src/jquery.js"></script>
+  <script src="../src/interface.js"></script>
+  <script src="../src/calculator.js"></script>
 
   </body>
+
 </html>
