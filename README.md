@@ -28,6 +28,7 @@ The **src/Interface.js** utilises jQuery to update the attributes on the Calcula
 
 * I used jQuery as it makes it much easier to use JavaScript on the browser. I was also doing alot of HTML/DOM manipulation, which jQuery helps with.
 * I used a little Bootstrap to help with the mobile responsiveness, but need to keep working with this framework.
+* I started to build a server side to help with state and potentially storing saved Maths in a database for scalability.
 
 ## Lessons Learned
 * Testing - the front-end code isn't tested as much as I would've liked, mainly due to my struggles testing jQuery.
